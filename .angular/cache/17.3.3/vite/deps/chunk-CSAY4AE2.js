@@ -110,7 +110,7 @@ import {
   ɵɵinject,
   ɵɵinjectAttribute,
   ɵɵstyleProp
-} from "./chunk-YVWIMTHM.js";
+} from "./chunk-UH4WWT23.js";
 
 // node_modules/@angular/common/fesm2022/common.mjs
 var _DOM = null;
@@ -970,6 +970,10 @@ function getLocaleEraNames(locale, width) {
   const data = findLocaleData(locale);
   const erasData = data[LocaleDataIndex.Eras];
   return getLastDefinedValue(erasData, width);
+}
+function getLocaleFirstDayOfWeek(locale) {
+  const data = findLocaleData(locale);
+  return data[LocaleDataIndex.FirstDayOfWeek];
 }
 function getLocaleDateFormat(locale, width) {
   const data = findLocaleData(locale);
@@ -8834,6 +8838,22 @@ export {
   PathLocationStrategy,
   HashLocationStrategy,
   Location,
+  FormStyle,
+  TranslationWidth,
+  FormatWidth,
+  getLocaleDayNames,
+  getLocaleMonthNames,
+  getLocaleFirstDayOfWeek,
+  getLocaleDateFormat,
+  NgClass,
+  NgForOf,
+  NgIf,
+  NgSwitch,
+  NgSwitchCase,
+  NgTemplateOutlet,
+  AsyncPipe,
+  CommonModule,
+  isPlatformBrowser,
   ViewportScroller,
   BrowserDomAdapter,
   BrowserGetTestability,
@@ -8895,4 +8915,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-6RID3OEN.js.map
+//# sourceMappingURL=chunk-CSAY4AE2.js.map
