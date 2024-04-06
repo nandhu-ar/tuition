@@ -6,12 +6,14 @@ import {
   sequence,
   style,
   ɵPRE_STYLE
-} from "./chunk-X6CBFUMC.js";
+} from "./chunk-DBCXNGBC.js";
 import {
   BrowserModule,
-  DOCUMENT,
   DomRendererFactory2
-} from "./chunk-CSAY4AE2.js";
+} from "./chunk-UI4UG2RJ.js";
+import {
+  DOCUMENT
+} from "./chunk-E2Z65HSH.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionScheduler,

@@ -1,0 +1,16 @@
+<form clrForm [formGroup]="enquiryForm" class="form">
+    <div class="input-container">
+        <clr-input-container>
+          <label>Name</label>
+          <input clrInput formControlName="name" />
+        </clr-input-container>
+        <clr-input-container>
+          <label>Subject</label>
+          <input clrInput formControlName="subject" />
+        </clr-input-container>
+    </div>
+    <div class="btn-container">
+        <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
+        <button class="btn" type="button" (click)="resetForm()">Reset</button>
+    </div>
+  </form>

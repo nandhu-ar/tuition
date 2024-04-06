@@ -1,0 +1,17 @@
+:host {
+    flex: 1;
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+
+        .btn-container {
+            display: flex;
+            .btn {
+                flex: 1;
+            }
+        }
+    }
+}
