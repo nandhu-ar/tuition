@@ -1,16 +1,35 @@
 <form clrForm [formGroup]="enquiryForm" class="form">
     <div class="input-container">
         <clr-input-container>
-          <label>Name</label>
-          <input clrInput formControlName="name" />
+            <label>Name</label>
+            <input clrInput formControlName="name" />
         </clr-input-container>
         <clr-input-container>
-          <label>Subject</label>
-          <input clrInput formControlName="subject" />
+            <label>Subject</label>
+            <input clrInput formControlName="subject" />
+        </clr-input-container>
+        <clr-dropdown>
+            <button class="btn btn-outline-primary" clrDropdownTrigger>
+                {{classDropDown}}
+                <cds-icon shape="angle" direction="down"></cds-icon>
+            </button>
+            <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+                <label class="dropdown-header" aria-hidden="true">Select your class</label>
+                <button aria-label="Dropdown header" clrDropdownItem *ngFor="let _class of classes" (click)="selectClass(_class)" >{{_class}}</button>
+                
+            </clr-dropdown-menu>
+        </clr-dropdown>
+        <clr-input-container>
+            <label>Contact Number</label>
+            <input clrInput formControlName="contact" />
+        </clr-input-container>
+        <clr-input-container>
+            <label>Email id</label>
+            <input clrInput formControlName="email" />
         </clr-input-container>
     </div>
     <div class="btn-container">
         <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
         <button class="btn" type="button" (click)="resetForm()">Reset</button>
     </div>
-  </form>
+</form>
