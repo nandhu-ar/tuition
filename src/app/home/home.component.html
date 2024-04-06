@@ -1,1 +1,31 @@
-<p>home works!</p>
+<div class="home-container">
+    <div class="intro-section">
+        <div cds-text="section" class="section-style">Expert tuition Service by expert teacher</div>
+        <p cds-text="message">
+            Enthellum oke oru valya kadha ezhuthu evide kond. 
+            About Me:
+            enoke paranj kure nthokeyo kidapund a word documentil angane vello detailsum koduk
+        </p>
+    </div>
+    <div class="divider"></div>
+    <div class="subject-section">
+        <p cds-text="subsection" class="section-style">Subjects Offered</p>
+        <ul class="list">
+            <li *ngFor="let subject of subjectsOffered" cds-text="message" class="min-gap">{{subject}}</li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="subject-section">
+        <p cds-text="subsection" class="section-style">Why Choose My Tuition</p>
+        <ul class="list">
+            <li *ngFor="let reason of reasonToChooseMe" cds-text="message" class="min-gap">{{reason}}</li>
+        </ul>
+    </div>
+    <div class="divider"></div>
+    <div class="subject-section">
+        <p cds-text="subsection" class="section-style">Contact Us</p>
+        Phone : 1234567890
+        Email Id: email
+        Location: googlemapslink koduk
+    </div>
+</div>

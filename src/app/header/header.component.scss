@@ -1,0 +1,17 @@
+@import './../../styles.scss';
+:host{
+    .header {
+        background-color: $header-color;
+        .title {
+            font-weight: 900;
+        }
+        .header-nav {
+            background-color: $header-color;
+            .nav-text {
+                font-size: 0.7rem;
+                font-weight: 600;
+                color: black;
+            }
+        }
+    }
+}

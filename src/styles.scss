@@ -1,6 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
+$header-color: var(--clr-btn-danger-bg-color);
+
 clr-dropdown {
     padding-top: 1rem;
     padding-bottom: 1rem;
+}
+
+.section-style {
+    padding-top: .6rem;
+    padding-bottom: .6rem;
+}
+
+div {
+    .section-style {
+        color: $header-color;
+        font-weight: bold;
+    }
+}
+
+.min-gap {
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+}
+
+.divider {
+    border-top: 1px solid #ccc;
 }

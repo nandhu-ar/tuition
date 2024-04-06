@@ -9,7 +9,7 @@
             <input clrInput formControlName="subject" />
         </clr-input-container>
         <clr-dropdown>
-            <button class="btn btn-outline-primary" clrDropdownTrigger>
+            <button class="btn btn-outline-danger" clrDropdownTrigger>
                 {{classDropDown}}
                 <cds-icon shape="angle" direction="down"></cds-icon>
             </button>
@@ -29,7 +29,7 @@
         </clr-input-container>
     </div>
     <div class="btn-container">
-        <button class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
-        <button class="btn" type="button" (click)="resetForm()">Reset</button>
+        <button class="btn btn-danger" type="submit" (click)="submit()">Submit</button>
+        <button class="btn btn-outline-danger" type="button" (click)="resetForm()">Reset</button>
     </div>
 </form>
