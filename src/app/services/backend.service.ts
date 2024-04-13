@@ -16,7 +16,15 @@ export class BackendService {
     }
   }
 
-  async getAllStudents() {
-    return await fetch("https://tuition-be.onrender.com/student");
+    async ping() {
+        try {
+            return await fetch("https://tuition-be.onrender.com/ping");
+        }
+        catch (error) {
+            this.currentRetry++;
+            if (this.currentRetry > this.maxRetry) return;
+            this.ping();
+        }
+        return;
   }
 }

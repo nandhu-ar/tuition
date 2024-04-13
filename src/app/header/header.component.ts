@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import * as content from '../../assets/content.json';
+import { BackendService } from '../services/backend.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,7 @@ import * as content from '../../assets/content.json';
 })
 export class HeaderComponent {
   public headerLogo = content.HEADER_LOGO;
-  constructor() {    
+  constructor() {
+    new BackendService().ping();
   }
 }
