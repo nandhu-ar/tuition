@@ -1,5 +1,12 @@
-<form clrForm [formGroup]="enquiryForm" class="form">
+<form *ngIf="!loading" clrForm [formGroup]="enquiryForm" class="form">
     <div class="input-container">
+        <clr-alert *ngIf="successMessage" [clrAlertType]="'success'">
+            <clr-alert-item>
+                <span class="alert-text">
+                    {{successMessage}}
+                </span>
+            </clr-alert-item>
+        </clr-alert>
         <clr-input-container>
             <label>Name</label>
             <input clrInput formControlName="name" />
@@ -15,8 +22,9 @@
             </button>
             <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
                 <label class="dropdown-header" aria-hidden="true">Select your class</label>
-                <button aria-label="Dropdown header" clrDropdownItem *ngFor="let _class of classes" (click)="selectClass(_class)" >{{_class}}</button>
-                
+                <button aria-label="Dropdown header" clrDropdownItem *ngFor="let _class of classes"
+                    (click)="selectClass(_class)">{{_class}}</button>
+
             </clr-dropdown-menu>
         </clr-dropdown>
         <clr-input-container>
@@ -27,9 +35,13 @@
             <label>Email id</label>
             <input clrInput formControlName="email" />
         </clr-input-container>
+        <div class="errorMessage">{{errorMessage}}</div>
     </div>
     <div class="btn-container">
         <button class="btn btn-danger" type="submit" (click)="submit()">Submit</button>
         <button class="btn btn-outline-danger" type="button" (click)="resetForm()">Reset</button>
     </div>
 </form>
+<div class="spinner-tuition">
+    <clr-spinner *ngIf="loading">Loading data</clr-spinner>
+</div>

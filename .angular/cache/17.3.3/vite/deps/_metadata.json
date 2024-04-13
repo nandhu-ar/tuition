@@ -1,55 +1,55 @@
 {
-  "hash": "fbe0d8de",
-  "configHash": "afb7d976",
+  "hash": "fad6fd15",
+  "configHash": "e80fcc18",
   "lockfileHash": "80b29de3",
-  "browserHash": "3a7c61c2",
+  "browserHash": "a094320d",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "e7dc5075",
+      "fileHash": "94b4a0f0",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "47a40287",
+      "fileHash": "05f440bc",
       "needsInterop": false
     },
     "@angular/forms": {
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
-      "fileHash": "4f98d357",
+      "fileHash": "aa6f244a",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "cb833472",
+      "fileHash": "a9ffd41d",
       "needsInterop": false
     },
     "@angular/platform-browser/animations": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/animations.mjs",
       "file": "@angular_platform-browser_animations.js",
-      "fileHash": "312c10ef",
+      "fileHash": "ccff8efa",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "e9f50e1d",
+      "fileHash": "b1e70a0b",
       "needsInterop": false
     },
     "@clr/angular": {
       "src": "../../../../../node_modules/@clr/angular/fesm2020/clr-angular.mjs",
       "file": "@clr_angular.js",
-      "fileHash": "df5e1ee7",
+      "fileHash": "74846777",
       "needsInterop": false
     },
-    "emailjs-com": {
-      "src": "../../../../../node_modules/emailjs-com/es/index.js",
-      "file": "emailjs-com.js",
-      "fileHash": "6b22567c",
+    "@angular/compiler": {
+      "src": "../../../../../node_modules/@angular/compiler/fesm2022/compiler.mjs",
+      "file": "@angular_compiler.js",
+      "fileHash": "9866246e",
       "needsInterop": false
     }
   },

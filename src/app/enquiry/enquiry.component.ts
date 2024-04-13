@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { EmailService } from "../services/email.service";
+import { BackendService } from "../services/backend.service";
 
 @Component({
   selector: "app-enquiry",
@@ -9,6 +9,13 @@ import { EmailService } from "../services/email.service";
 })
 export class EnquiryComponent {
   public classes = ["Class 1", "Class 2"];
+  public errorMessage = '';
+  public successMessage = '';
+  public loading = false;
+  public _backendService: BackendService;
+  constructor() {
+    this._backendService = new BackendService();
+  }
   public enquiryForm = new FormGroup({
     name: new FormControl("", [Validators.required]),
     subject: new FormControl("", [Validators.required]),
@@ -17,10 +24,16 @@ export class EnquiryComponent {
     email: new FormControl("", [Validators.required, Validators.email]),
   });
 
-  submit() {
-    console.log(this.enquiryForm.value);
+  async submit() {
+    const fields = Object.keys(this.enquiryForm.controls);
+    const invalidFields = fields.filter(field => this.enquiryForm.get(field)?.invalid);
+    this.errorMessage = 'These fields are invalid ' + invalidFields.join(',');
     if (!this.enquiryForm.valid) return;
-    new EmailService().sendEmail(this.enquiryForm.value);
+    this.errorMessage = '';
+    this.loading = true;
+    await this._backendService.saveDetails(this.enquiryForm.value);
+    this.loading = false;
+    this.successMessage = 'Your details have been submitted successfully. We will reach out to you shortly.';
   }
 
   get classDropDown() {

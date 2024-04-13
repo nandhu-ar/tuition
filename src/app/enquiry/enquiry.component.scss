@@ -13,5 +13,11 @@
                 flex: 1;
             }
         }
+        
+        .errorMessage {
+            color: red;
+            font-weight: 700;
+            padding-top: 1rem;
+        }
     }
 }
