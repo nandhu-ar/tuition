@@ -10,7 +10,7 @@ export class BackendService {
         },
         body: JSON.stringify(data),
       });
-        return 'Your data is saved.'
+        return 'Your data is saved.';
     } catch (ex) {
         return 'Your data was not saved';
     }
